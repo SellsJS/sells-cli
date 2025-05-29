@@ -1,0 +1,16 @@
+{
+  "name": "@sells/sells-cli",
+  "version": "1.0.0",
+  "description": "CLI to manage apps, components, sections and DMs",
+  "bin": {
+    "sells": "./bin/sells.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node bin/sells.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0"
+  }
+}
