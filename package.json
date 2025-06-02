@@ -1,6 +1,6 @@
 {
   "name": "@sells/sells-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "CLI to manage apps, components, sections and DMs",
   "bin": {
     "sells": "./bin/sells.js"

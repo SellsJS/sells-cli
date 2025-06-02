@@ -84,4 +84,4 @@ program.on("command:*", ([cmd]) => {
 });
 
 // Parse known commands
-program.parse(process.argv, { from: "user" });
+program.parse(process.argv);

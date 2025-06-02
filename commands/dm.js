@@ -1,10 +1,20 @@
-export default function(program) {
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+import { createDM } from './dm/create.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default (program) => {
   program
-    .command('create:dm')
+    .command('create:dm <name>')
     .description('Create a new DM')
-    .action(() => {
-      console.log('🛠️  Creating new DM...');
-      // You could scaffold a DM module here
+    .action((name) => {
+      const kebabName = `${name}-dm`;
+      const basePath = path.join(process.cwd(), kebabName);
+
+      createDM(name, kebabName, basePath);
     });
 
   program
